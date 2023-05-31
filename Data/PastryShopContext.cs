@@ -6,11 +6,11 @@ namespace PastryShopOrders.Data
 {
     public class PastryShopContext : DbContext
     {
-        public DbSet<Client> clients { get; set; }
-        public DbSet<Employee> employees { get; set; }
-        public DbSet<Order> orders { get; set; }
-        public DbSet<Pastry> pastries { get; set; }
-        public DbSet<OrderPastry> orderPastries { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Pastry> Pastries { get; set; }
+        public DbSet<OrderPastry> OrderPastries { get; set; }
 
         public PastryShopContext(DbContextOptions options) : base(options)
         { }
