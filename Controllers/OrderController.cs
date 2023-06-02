@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PastryShopOrders.Models.DTOs;
 using PastryShopOrders.Services;
 
 namespace PastryShopOrders.Controllers
@@ -7,17 +8,17 @@ namespace PastryShopOrders.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly IOrderService _orderService;
+        private readonly IDbService _dbService;
 
-        public OrderController(IOrderService orderService)
+        public OrderController(IDbService dbService)
         {
-            _orderService = orderService;
+            _dbService = dbService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetOrders(string? clientLastName)
         {
-            var orders = await _orderService.GetOrders(clientLastName);
+            var orders = await _dbService.GetOrders(clientLastName);
             return Ok(orders);
 
         }

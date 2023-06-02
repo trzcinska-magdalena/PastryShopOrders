@@ -1,6 +1,6 @@
 ﻿namespace PastryShopOrders.Models.DTOs
 {
-    public class OrderWithAdditionalData
+    public class OrderWithAdditionalDataGET
     {
         public int ID { get; set; }
         public DateTime AcceptedAt { get; set; }
